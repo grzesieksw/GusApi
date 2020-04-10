@@ -1,0 +1,66 @@
+﻿{
+  "ProviderId": "Microsoft.VisualStudio.ConnectedService.Wcf",
+  "Version": "15.0.40203.910",
+  "ExtendedData": {
+    "inputs": [
+      "https://wyszukiwarkaregon.stat.gov.pl/wsBIR/wsdl/UslugaBIRzewnPubl-ver11-prod.wsdl"
+    ],
+    "collectionTypes": [
+      "System.Array",
+      "System.Collections.Generic.Dictionary`2"
+    ],
+    "namespaceMappings": [
+      "*, Gus"
+    ],
+    "references": [
+      "Microsoft.CSharp, {Microsoft.CSharp, 4.3.0}",
+      "Newtonsoft.Json, {Newtonsoft.Json, 10.0.1}",
+      "Newtonsoft.Json.Bson, {Newtonsoft.Json.Bson, 1.0.1}",
+      "System.Collections, {System.Collections, 4.3.0}",
+      "System.Collections.NonGeneric, {System.Collections.NonGeneric, 4.3.0}",
+      "System.ComponentModel, {System.ComponentModel, 4.3.0}",
+      "System.ComponentModel.Primitives, {System.ComponentModel.Primitives, 4.3.0}",
+      "System.ComponentModel.TypeConverter, {System.ComponentModel.TypeConverter, 4.3.0}",
+      "System.Diagnostics.Debug, {System.Diagnostics.Debug, 4.3.0}",
+      "System.Dynamic.Runtime, {System.Dynamic.Runtime, 4.3.0}",
+      "System.Globalization, {System.Globalization, 4.3.0}",
+      "System.IO, {System.IO, 4.3.0}",
+      "System.Linq, {System.Linq, 4.3.0}",
+      "System.Linq.Expressions, {System.Linq.Expressions, 4.3.0}",
+      "System.Net.Http.Formatting, {Microsoft.AspNet.WebApi.Client, 5.2.7}",
+      "System.ObjectModel, {System.ObjectModel, 4.3.0}",
+      "System.Reflection, {System.Reflection, 4.3.0}",
+      "System.Reflection.DispatchProxy, {System.Reflection.DispatchProxy, 4.5.0}",
+      "System.Reflection.Extensions, {System.Reflection.Extensions, 4.3.0}",
+      "System.Reflection.Primitives, {System.Reflection.Primitives, 4.3.0}",
+      "System.Resources.ResourceManager, {System.Resources.ResourceManager, 4.3.0}",
+      "System.Runtime, {System.Runtime, 4.3.0}",
+      "System.Runtime.Extensions, {System.Runtime.Extensions, 4.3.0}",
+      "System.Runtime.Numerics, {System.Runtime.Numerics, 4.3.0}",
+      "System.Runtime.Serialization.Formatters, {System.Runtime.Serialization.Formatters, 4.3.0}",
+      "System.Runtime.Serialization.Primitives, {System.Runtime.Serialization.Primitives, 4.3.0}",
+      "System.Security.AccessControl, {System.Security.AccessControl, 4.5.0}",
+      "System.Security.Cryptography.Xml, {System.Security.Cryptography.Xml, 4.5.0}",
+      "System.Security.Permissions, {System.Security.Permissions, 4.5.0}",
+      "System.Security.Principal.Windows, {System.Security.Principal.Windows, 4.5.0}",
+      "System.ServiceModel, {System.ServiceModel.Primitives, 4.7.0}",
+      "System.ServiceModel.Duplex, {System.ServiceModel.Duplex, 4.4.4}",
+      "System.ServiceModel.Http, {System.ServiceModel.Http, 4.7.0}",
+      "System.ServiceModel.NetTcp, {System.ServiceModel.NetTcp, 4.4.4}",
+      "System.ServiceModel.Primitives, {System.ServiceModel.Primitives, 4.7.0}",
+      "System.ServiceModel.Security, {System.ServiceModel.Security, 4.4.4}",
+      "System.Text.Encoding, {System.Text.Encoding, 4.3.0}",
+      "System.Text.Encoding.Extensions, {System.Text.Encoding.Extensions, 4.3.0}",
+      "System.Text.RegularExpressions, {System.Text.RegularExpressions, 4.3.0}",
+      "System.Threading, {System.Threading, 4.3.0}",
+      "System.Threading.Tasks, {System.Threading.Tasks, 4.3.0}",
+      "System.Xml.ReaderWriter, {System.Xml.ReaderWriter, 4.3.0}",
+      "System.Xml.XDocument, {System.Xml.XDocument, 4.3.0}",
+      "System.Xml.XmlDocument, {System.Xml.XmlDocument, 4.3.0}",
+      "WcfCoreMtomEncoder, {WcfCoreMtomEncoder, 0.1.16}"
+    ],
+    "sync": true,
+    "targetFramework": "netstandard2.0",
+    "typeReuseMode": "All"
+  }
+}
