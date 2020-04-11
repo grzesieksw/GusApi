@@ -10,7 +10,7 @@ Jeżeli podstawowe zastosowanie jest wystarczające, wystarczy skompilować proj
 
 ### Wymagania
 
-Biblioteka jest domyślnie kompilowana w .net Standard 2.0, więc można ją wykorzystać zarówno w .net core > 2.0 oraz .net Framework > 4.6.1
+Biblioteka jest domyślnie kompilowana w .net Standard 2.0, więc można ją wykorzystać zarówno w .net core > 2.0 oraz .net Framework > 4.6.1.
 Wymagany jest klucz Api, który można uzyskać na stronie Gusu, po przesłaniu wniosku.
 
 
