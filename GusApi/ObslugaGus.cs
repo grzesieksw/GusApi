@@ -9,7 +9,7 @@ using WcfCoreMtomEncoder;
 
 namespace GusApi
 {
-    public class ObslugaGus
+    public class ObslugaGus : IObslugaGus
     {
         private readonly UslugaBIRzewnPublClient GusServices;
         private readonly string apiKey;
@@ -39,12 +39,12 @@ namespace GusApi
                     xRoot.ElementName = "root";
 
                     XmlSerializer daneSzukajSerializer = new XmlSerializer(typeof(DaneGus), xRoot);
-                    var daneGus = (DaneGus) daneSzukajSerializer.Deserialize(reader);
+                    var daneGus = (DaneGus)daneSzukajSerializer.Deserialize(reader);
 
                     return daneGus.dane;
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
