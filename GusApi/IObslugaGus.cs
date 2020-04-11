@@ -4,7 +4,9 @@ namespace GusApi
 {
     public interface IObslugaGus
     {
-        void Logout();
+        string ApiKey { get; set; }
+
         PodmiotGus PobierzDanePodmiotu(string nip);
+        void Logout();
     }
 }

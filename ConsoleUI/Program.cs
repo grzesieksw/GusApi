@@ -14,7 +14,7 @@ namespace ConsoleUI
             ObslugaGus gus = new ObslugaGus();
 
             gus.ApiKey = "twojKluczApi";
-            var podmiot = gus.PobierzDanePodmiotu("twojnip");
+            var podmiot = gus.PobierzDanePodmiotu("numernip");
         }
     }
 }
