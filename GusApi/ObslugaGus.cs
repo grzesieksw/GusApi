@@ -11,14 +11,14 @@ namespace GusApi
 {
     public class ObslugaGus : IObslugaGus
     {
-        private readonly UslugaBIRzewnPublClient GusServices;
-        private readonly string apiKey;
-        private string sessionId;
+        public string ApiKey { get; set; }
 
-        public ObslugaGus(string apiKey)
+        private readonly UslugaBIRzewnPublClient _gusServices;
+        private string _sessionId;
+
+        public ObslugaGus()
         {
-            this.apiKey = apiKey;
-            GusServices = new UslugaBIRzewnPublClient();
+            _gusServices = new UslugaBIRzewnPublClient();
             SetupBinding();
         }
 
@@ -31,7 +31,7 @@ namespace GusApi
 
             try
             {
-                string daneSzukajResponse = GusServices.DaneSzukajPodmioty(nipData);
+                string daneSzukajResponse = _gusServices.DaneSzukajPodmioty(nipData);
 
                 using (var reader = new StringReader(daneSzukajResponse))
                 {
@@ -54,24 +54,24 @@ namespace GusApi
 
         private void LoginIfRequired()
         {
-            if (GusServices.GetValue("StatusSesji") == "0") Login();
+            if (_gusServices.GetValue("StatusSesji") == "0") Login();
         }
 
         private void Login()
         {
-            sessionId = GusServices.Zaloguj(apiKey);
+            _sessionId = _gusServices.Zaloguj(ApiKey);
 
-            OperationContextScope scope = new OperationContextScope(GusServices.InnerChannel);
+            OperationContextScope scope = new OperationContextScope(_gusServices.InnerChannel);
 
             HttpRequestMessageProperty requestProperties = new HttpRequestMessageProperty();
-            requestProperties.Headers.Add("sid", sessionId);
+            requestProperties.Headers.Add("sid", _sessionId);
             OperationContext.Current.OutgoingMessageProperties[HttpRequestMessageProperty.Name] = requestProperties;
 
         }
 
         public void Logout()
         {
-            GusServices.Wyloguj(sessionId);
+            _gusServices.Wyloguj(_sessionId);
         }
 
         private void SetupBinding()
@@ -81,7 +81,7 @@ namespace GusApi
 
             var customBinding = new CustomBinding(encoding, transport);
 
-            GusServices.Endpoint.Binding = customBinding;
+            _gusServices.Endpoint.Binding = customBinding;
         }
     }
 }

@@ -11,8 +11,9 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            ObslugaGus gus = new ObslugaGus("twojKluczApi");
+            ObslugaGus gus = new ObslugaGus();
 
+            gus.ApiKey = "twojKluczApi";
             var podmiot = gus.PobierzDanePodmiotu("twojnip");
         }
     }
